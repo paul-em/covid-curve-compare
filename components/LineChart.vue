@@ -41,6 +41,9 @@ export default {
         legend: {
           display: false,
         },
+        tooltips: {
+          enabled: false,
+        },
         scales: {
           yAxes: [{
             type: 'linear',
@@ -48,11 +51,17 @@ export default {
               display: true,
               labelString: 'Cases per million in population',
             },
+            gridLines: {
+              drawBorder: false,
+            },
           }],
           xAxes: [{
             scaleLabel: {
               display: true,
               labelString: 'Days since reaching 1 per million in population',
+            },
+            gridLines: {
+              display: false,
             },
           }],
         },
