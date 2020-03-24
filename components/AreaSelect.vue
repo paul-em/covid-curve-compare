@@ -11,9 +11,10 @@
       >
         {{ item }}
       </span>
-      <div class="inline-block min-w-200">
+      <div class="inline-block dropdown">
         <v-select
           :options="notSelectedAreas"
+          :components="{OpenIndicator}"
           :value="null"
           placeholder="Add another"
           @input="select"/>
@@ -39,6 +40,11 @@ export default {
     areas: { type: Array, required: true },
     value: { type: Array, required: true },
   },
+  data: () => ({
+    OpenIndicator: {
+      render: createElement => createElement('span', ''),
+    },
+  }),
   computed: {
     notSelectedAreas() {
       return this.areas.filter(area => !this.value.includes(area));
@@ -61,6 +67,10 @@ export default {
 <style>
 .area-select {
   min-height: 100px;
+}
+
+.dropdown {
+  min-width: 260px;
 }
 
 .vs__dropdown-toggle {
