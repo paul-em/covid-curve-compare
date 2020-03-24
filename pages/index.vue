@@ -1,10 +1,16 @@
 <template>
   <section>
     <github-corner url="https://github.com/paul-em/covid-curve-compare"/>
-    <h1 class="p-16 max-w-xl">
+    <h1 class="px-16 pt-16 max-w-xl">
       Population adjusted curves of confirmed Covid-19 cases
       starting from day of reaching 1 case per million
     </h1>
+    <p class="px-16 py-2">
+      Updated once per day <a
+        class="text-blue"
+        target="_blank"
+        href="https://github.com/CSSEGISandData/COVID-19">by John Hopkins University</a>
+    </p>
     <area-select
       v-model="selectedAreas"
       :areas="areas"

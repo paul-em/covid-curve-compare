@@ -2,7 +2,9 @@
 
 > Compare Existing Curves for Covid-19 with Popluation in mind
 
-[https://paul-em.github.io/covid-curve-compare/](https://paul-em.github.io/covid-curve-compare/)
+## Check it out: [https://paul-em.github.io/covid-curve-compare](https://paul-em.github.io/covid-curve-compare)
+
+Data is loaded from [John Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19) via a [Cloudflare Worker](https://github.com/paul-em/covid19-jhu-cl-worker).
 
 ## Build Setup
 

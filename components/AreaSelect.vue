@@ -11,7 +11,7 @@
       >
         {{ item }}
       </span>
-      <div class="inline-block min-w-140">
+      <div class="inline-block min-w-200">
         <v-select
           :options="notSelectedAreas"
           :value="null"
