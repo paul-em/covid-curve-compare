@@ -1,5 +1,6 @@
 <template>
   <section>
+    <github-corner url="https://github.com/paul-em/covid-curve-compare"/>
     <area-select
       v-model="selectedAreas"
       :areas="areas"
@@ -14,6 +15,7 @@
 <script>
 import AreaSelect from '../components/AreaSelect.vue';
 import LineChart from '../components/LineChart.vue';
+import GithubCorner from '../components/GithubCorner.vue';
 import populations from '../assets/populations';
 
 export default {
@@ -26,6 +28,7 @@ export default {
   components: {
     AreaSelect,
     LineChart,
+    GithubCorner,
   },
   data: () => ({
     selectedAreas: ['Austria', 'Germany', 'Italy', 'Spain', 'Korea', 'Hubei, China', 'US'],
