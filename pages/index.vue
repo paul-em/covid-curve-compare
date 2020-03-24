@@ -67,8 +67,11 @@ export default {
         label: area,
         data: this.getAdjustedData(area),
         backgroundColor: 'rgba(0, 0, 0, 0)',
-        borderColor: this.$color.rgba(area, 0.8),
+        borderColor: this.$color.rgba(area, 0.5),
+        hoverBorderColor: this.$color.rgba(area, 1),
         pointRadius: 0,
+        pointHoverRadius: 0,
+        pointHitRadius: 20,
       }));
     },
   },

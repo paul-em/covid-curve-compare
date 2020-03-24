@@ -42,7 +42,16 @@ export default {
           display: false,
         },
         tooltips: {
-          enabled: false,
+          enabled: true,
+          displayColors: false,
+          callbacks: {
+            label(tooltipItem, data) {
+              return data.datasets[tooltipItem.datasetIndex].label || '';
+            },
+            title() {
+              return '';
+            },
+          },
         },
         scales: {
           yAxes: [{
