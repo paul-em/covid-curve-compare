@@ -59,8 +59,19 @@ export default {
       }));
     },
   },
+  watch: {
+    selectedAreas() {
+      this.$router.push({
+        query: {
+          shown: this.selectedAreas,
+        },
+      });
+    },
+  },
   mounted() {
-    console.log(this.missingPopulations);
+    if (this.$route.query.shown) {
+      this.selectedAreas = this.$route.query.shown;
+    }
   },
   methods: {
     getAdjustedData(area) {
