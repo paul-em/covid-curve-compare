@@ -2,6 +2,8 @@
 
 > Compare Existing Curves for Covid-19 with Popluation in mind
 
+[https://paul-em.github.io/covid-curve-compare/](https://paul-em.github.io/covid-curve-compare/)
+
 ## Build Setup
 
 ``` bash
