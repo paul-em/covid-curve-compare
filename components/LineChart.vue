@@ -1,5 +1,5 @@
 <template>
-  <div class="chart-container relative">
+  <div class="chart-container relative p-8">
     <canvas
       id="myChart"
       ref="chart"
@@ -86,6 +86,6 @@ canvas {
 .chart-container {
   width: 100%;
   min-width: 360px;
-  height: 400px;
+  height: 70vh;
 }
 </style>

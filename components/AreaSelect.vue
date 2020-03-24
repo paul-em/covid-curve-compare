@@ -1,20 +1,25 @@
 <template>
-  <div class="p-8">
-    <span
-      v-for="item in value"
-      :key="item"
-      :style="{ 'border-color': $color.hex(item) }"
-      class="border-b-2 mr-2"
-      @click="unselect(item)"
-    >
-      {{ item }}
-    </span>
-    <div class="inline-block min-w-100">
-      <v-select
-        :options="notSelectedAreas"
-        :value="null"
-        @input="select"/>
+  <div class="flex flex-col align-center p-16 area-select">
+    <div class="flex-1"/>
+    <div>
+      <span
+        v-for="item in value"
+        :key="item"
+        :style="{ 'border-color': $color.hex(item) }"
+        class="border-b-2 mr-4 my-2 inline-block cursor-pointer"
+        @click="unselect(item)"
+      >
+        {{ item }}
+      </span>
+      <div class="inline-block min-w-140">
+        <v-select
+          :options="notSelectedAreas"
+          :value="null"
+          placeholder="Add another"
+          @input="select"/>
+      </div>
     </div>
+    <div class="flex-1"/>
   </div>
 </template>
 
@@ -54,4 +59,11 @@ export default {
 </script>
 
 <style>
+.area-select {
+  min-height: 30vh;
+}
+
+.vs__dropdown-toggle {
+  border: 0;
+}
 </style>
