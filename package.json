@@ -1,0 +1,36 @@
+{
+  "name": "covid-curve-compare",
+  "version": "1.0.0",
+  "description": "Compare Existing Curves for Covid-19 with Popluation in mind",
+  "author": "Paul Em",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "chart.js": "^2.9.3",
+    "cross-env": "^5.2.0",
+    "color-hash": "^1.0.3",
+    "nuxt": "^2.0.0",
+    "papaparse": "^5.1.1",
+    "vue-select": "^3.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-akarion": "github:AkarionDevelopers/eslint-config-akarion#v1.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-vue": "^4.0.0",
+    "autoprefixer": "^8.6.4",
+    "tailwindcss": "~0.6.6"
+  }
+}
