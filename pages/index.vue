@@ -43,6 +43,7 @@ export default {
   data: () => ({
     selectedAreas: ['Austria', 'Germany', 'Italy', 'Spain', 'Korea', 'Hubei, China', 'US'],
     confirmed: {},
+    startAt: 1,
   }),
   computed: {
     areas() {
@@ -97,7 +98,7 @@ export default {
       // start when per million hits 1
       const startAdjusted = [];
       perMillionTimline.forEach((val) => {
-        if (startAdjusted.length || val >= 1) {
+        if (startAdjusted.length || val >= this.startAt) {
           startAdjusted.push(val);
         }
       });
