@@ -86,6 +86,6 @@ canvas {
 .chart-container {
   width: 100%;
   min-width: 360px;
-  height: 70vh;
+  height: 50vh;
 }
 </style>

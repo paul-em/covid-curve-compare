@@ -60,7 +60,7 @@ export default {
 
 <style>
 .area-select {
-  min-height: 30vh;
+  min-height: 100px;
 }
 
 .vs__dropdown-toggle {
