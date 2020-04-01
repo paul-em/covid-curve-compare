@@ -2,7 +2,7 @@
   <section>
     <github-corner url="https://github.com/paul-em/covid-curve-compare"/>
     <h1 class="px-16 pt-16 max-w-xl">
-      Population adjusted curves of confirmed Covid-19 cases
+      Population adjusted curves of active Covid-19 cases
       starting from day of reaching 1 case per million
     </h1>
     <p class="px-16 py-2">
