@@ -30,9 +30,18 @@ import populations from '../assets/populations';
 
 export default {
   async asyncData({ $axios }) {
-    const re = await $axios.get('https://covid19.cors-everywhere.workers.dev');
+    const [confirmed, deaths, recovered] = await Promise.all([
+      $axios.get('https://covid19.cors-everywhere.workers.dev?metric=confirmed'),
+      $axios.get('https://covid19.cors-everywhere.workers.dev?metric=deaths'),
+      $axios.get('https://covid19.cors-everywhere.workers.dev?metric=recovered'),
+    ]);
+    const active = {};
+    Object.keys(confirmed.data).forEach((area) => {
+      active[area] = confirmed.data[area].map((value, index) => value
+          - ((deaths.data[area] || [])[index] + (recovered.data[area] || [])[index]));
+    });
     return {
-      confirmed: re.data,
+      confirmed: active,
     };
   },
   components: {
