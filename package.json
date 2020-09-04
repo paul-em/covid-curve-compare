@@ -22,7 +22,7 @@
     "cross-env": "^5.2.0",
     "color-hash": "^1.0.3",
     "nuxt": "^2.0.0",
-    "papaparse": "^5.1.1",
+    "papaparse": "^5.2.0",
     "vue-select": "^3.9.4"
   },
   "devDependencies": {
